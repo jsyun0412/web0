@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      html,body{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .container{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+        height: 100%;
+      }
+      .img-ndg{
+        width: 500px;
+        height: 280px;
+        border: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="img-ndg"
+        src="ndg.jpg"
+        onmouseenter="zoomIn(event)"
+        onmouseleave="zoomOut(event)"
+      />
+      <img
+        class="img-ndg"
+        src="ndg1.jpg"
+        onmouseenter="zoomIn(event)"
+        onmouseleave="zoomOut(event)"
+      />
+      <img
+        class="img-ndg"
+        src="ndg2.jpg"
+        onmouseenter="zoomIn(event)"
+        onmouseleave="zoomOut(event)"
+      />
+    </div>
+    <script>
+      function zoomIn(event){
+        event.target.style.width = "600px";
+        event.target.style.height = "336px";
+        event.target.style.transition = "all 0.5s";
+      }
+
+      function zoomOut(event){
+        event.target.style.width = "500px";
+        event.target.style.height = "280px";
+        event.target.style.transition = "all 0.5s";
+      }
+    </script>
+  </body>
+</html>
